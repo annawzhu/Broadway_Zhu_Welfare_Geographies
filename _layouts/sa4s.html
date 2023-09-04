@@ -7,11 +7,9 @@ layout: default
 {% if page.name == "combined" %}
     {% assign features = site.features | sort: "code" %}
     {% for feature in features %}
-        {% capture image_file %}
-        /assets/img/combined/resids_{{feature.code}}{{feature.name}}_r.png
-        {% endcapture %}
+        {% capture image_file %}/assets/img/combined/resids_{{feature.code}}{{feature.name}}_r.png{% endcapture %}
         <h2>{{ feature.name }}</h2>
-        <img src={{image_file}}>
+        <img src={{ image_file | relative_url }}>
     {% endfor %}
 {% else %}
     {{ page.name }}

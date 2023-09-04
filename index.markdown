@@ -8,10 +8,10 @@ layout: default
 # Features
 {% assign features = site.features | sort: "code" %}
 {% for feature in features %}
-  [{{ feature.name }}]({{ feature.url }})
+  [{{ feature.name }}]({{ feature.url | relative_url }})
 {% endfor %}
 
 # SA4s
 {% for sa4 in site.sa4s %}
-  [{{ sa4.name }}]({{ sa4.url }})
+  [{{ sa4.name }}]({{ sa4.url | relative_url }})
 {% endfor %}

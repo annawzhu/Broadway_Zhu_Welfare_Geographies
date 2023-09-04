@@ -5,11 +5,9 @@ layout: default
 <h1>{{ page.name }}</h1>
 {% for sa4 in site.sa4s %}
     {% if sa4.name == "combined" %}
-        {% capture image_file %}
-        /assets/img/combined/resids_{{page.code}}{{page.name}}_r.png
-        {% endcapture %}
+        {% capture image_file %}/assets/img/combined/resids_{{page.code}}{{page.name}}_r.png{% endcapture %}
         <h2>{{ sa4.name }}</h2>
-        <img src={{image_file}}>
+        <img src={{ image_file | relative_url }}>
     {% endif %}
 {% endfor %}
 
