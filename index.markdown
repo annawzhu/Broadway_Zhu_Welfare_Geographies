@@ -6,11 +6,12 @@ layout: default
 ---
 
 # Features
-{% for feature in site.features %}
-  {{ feature.name }}
+{% assign features = site.features | sort: "code" %}
+{% for feature in features %}
+  [{{ feature.name }}]({{ feature.url }})
 {% endfor %}
 
 # SA4s
 {% for sa4 in site.sa4s %}
-  {{ sa4.name }}
+  [{{ sa4.name }}]({{ sa4.url }})
 {% endfor %}
