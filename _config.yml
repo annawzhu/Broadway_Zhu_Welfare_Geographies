@@ -67,3 +67,8 @@ defaults:
       type: sa4s
     values:
       layout: sa4s
+  - scope:
+      path: ""
+      type: features
+    values:
+      layout: features
