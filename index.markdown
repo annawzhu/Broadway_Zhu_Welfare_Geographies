@@ -4,3 +4,13 @@
 
 layout: default
 ---
+
+# Features
+{% for feature in site.features %}
+  {{ feature.name }}
+{% endfor %}
+
+# SA4s
+{% for sa4 in site.sa4s %}
+  {{ sa4.name }}
+{% endfor %}
