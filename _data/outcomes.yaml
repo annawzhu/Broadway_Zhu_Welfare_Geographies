@@ -1,0 +1,11 @@
+- name: income_support
+  label: Income Support (months in the year)
+  graphs_location: rd_plots_IS
+- name: income
+  label: Income (annual AUD)
+- name: employment
+  label: Employment (%)
+- name: repartnering
+  label: Re-partnering (%)
+- name: location
+  label: Moving location (%)

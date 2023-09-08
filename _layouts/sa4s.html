@@ -2,4 +2,17 @@
 layout: default
 ---
 
-<h1>{{ page.name }}</h1>
+<h1>{{ page.label }}</h1>
+
+{% for outcome in site.data.outcomes %}
+    <h2>{{ outcome.label }}</h2>
+    {% for year in site.data.years %}
+        <h3>Year {{ year }}</h3>
+        {% capture image_file %}/assets/img/{{ outcome.graphs_location }}/g{{ year }}_{{ page.name }}.png{% endcapture %}
+        <div>
+            <img source={{ image_file  | relative_url }}>
+        </div>
+    {% endfor %}
+{% endfor %}
+
+{{ content }}
