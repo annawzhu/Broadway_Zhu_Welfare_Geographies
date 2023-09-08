@@ -1,0 +1,9 @@
+- name: shareTBFT
+  code: a01
+  label: Share of population who is commuting by train, bus, ferry, tram, or any combination (plus bike), out of all working and method stated, 2006, in SA4
+- name: shareBikeWalk
+  code: a02
+  label: Share of population who is commuting by walking or bike only, out of all working and method stated, 2006, in SA4
+- name: shareWorkHome
+  code: a03
+  label: Share of population who is working at home, out of all working and method stated, 2006, in SA4

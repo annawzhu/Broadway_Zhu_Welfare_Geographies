@@ -54,7 +54,7 @@ plugins:
 collections:
   sa4s:
     output: true
-  features:
+  characteristics:
     output: true
 
 defaults:
@@ -65,9 +65,9 @@ defaults:
       layout: sa4s
   - scope:
       path: ""
-      type: features
+      type: characteristics
     values:
-      layout: features
+      layout: characteristics
 
 github: 
   is_project_page: False

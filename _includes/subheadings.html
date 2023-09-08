@@ -1,0 +1,11 @@
+{% for subheading in include.subheadings %}
+<h{{ include.level }}>{{ subheading.label }}</h{{ include.level }}>
+
+    {% assign sub_level = include.level | plus: 1 %}
+    {% include subheadings.html subheadings=subheading.subheadings level=sub_level %}
+    {% for feature in subheading.features %}
+        {% include feature_image.html feature=feature %}
+    {% endfor %}
+
+{% endfor %}
+

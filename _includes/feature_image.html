@@ -1,0 +1,9 @@
+<div>
+    {% assign feat = site.data.features | where:"name",include.feature | first %}
+    {% capture image_file %}/assets/img/combined/resids_{{feat.code}}{{feat.name}}_r.png{% endcapture %}
+    <div>
+        {{ feat.label }}
+        <img src={{ image_file | relative_url }}>
+    </div>
+    <!-- <b>{{ site.data.features }}</b> -->
+</div>
