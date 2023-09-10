@@ -5,9 +5,8 @@ layout: default
 <h1>{{ page.label }}</h1>
 
 {% for outcome in site.data.outcomes %}
-    <a id={{ outcome.name }}>
-        <h2>{{ outcome.label }}</h2>
-    </a>
+    {% capture direct_link %}{{ page.url }}#{{ outcome.name }}{% endcapture %}
+    <h2 id={{ outcome.name }}>{{ outcome.label }}<a href={{ direct_link | relative_url }}>#</a></h2>
     {% for year in site.data.years %}
         <h3>Year {{ year }}</h3>
         <div>
