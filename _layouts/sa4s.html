@@ -5,7 +5,9 @@ layout: default
 <h1>{{ page.label }}</h1>
 
 {% for outcome in site.data.outcomes %}
-    <h2>{{ outcome.label }}</h2>
+    <a id={{ outcome.name }}>
+        <h2>{{ outcome.label }}</h2>
+    </a>
     {% for year in site.data.years %}
         <h3>Year {{ year }}</h3>
         <div>

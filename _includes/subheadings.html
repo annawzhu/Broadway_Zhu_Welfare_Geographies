@@ -1,5 +1,14 @@
 {% for subheading in include.subheadings %}
+
+{% if include.level == 2 %}
+<a id={{ subheading.name }}>
+{% endif %}
+
 <h{{ include.level }}>{{ subheading.label }}</h{{ include.level }}>
+
+{% if include.level == 2 %}
+</a>
+{% endif %}
 
     {% assign sub_level = include.level | plus: 1 %}
     {% include subheadings.html subheadings=subheading.subheadings level=sub_level %}
