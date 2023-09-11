@@ -17,7 +17,7 @@ layout: default
 
 # SA4s
 {% for sa4 in site.sa4s %}
-  - [SA4 {{ sa4.name }}]({{ sa4.url | relative_url }})
+  - [{{ sa4.label }}]({{ sa4.url | relative_url }})
   {% for outcome in site.data.outcomes %}
     {% capture direct_link %}{{ sa4.url }}#{{ outcome.name }}{% endcapture %}
     - [{{ outcome.label }}]({{ direct_link | relative_url }})

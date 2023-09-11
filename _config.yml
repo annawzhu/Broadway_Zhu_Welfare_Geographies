@@ -54,6 +54,7 @@ plugins:
 collections:
   sa4s:
     output: true
+    permalink: /:collection/:slug:output_ext
   characteristics:
     output: true
 
