@@ -32,17 +32,25 @@ layout: test
 <ul class="cd-accordion cd-accordion--animated">
   {% for sa4 in site.sa4s %}
     <li class="cd-accordion__item cd-accordion__item--has-children">
-      <input class="cd-accordion__input" type="checkbox" id={{ sa4.label }}>
-      <label class="cd-accordion__label cd-accordion__label--icon-folder" for={{ sa4.label }}>
+      <input class="cd-accordion__input" type="checkbox" id={{ sa4.name }}>
+      <label class="cd-accordion__label cd-accordion__label--icon-folder" for={{ sa4.name }}>
         <a href="{{ sa4.url | relative_url }}">{{ sa4.label }}</a>
       </label>
       <ul class="cd-accordion__sub">
         {% for outcome in site.data.outcomes %}
           {% capture direct_link %}{{ sa4.url }}#{{ outcome.name }}{% endcapture %}
-          <li class="cd-accordion__item">
-            <label class="cd-accordion__label">
+          <li class="cd-accordion__item cd-accordion__item--has-children">
+            <input class="cd-accordion__input" type="checkbox" id={{ outcome.name }}>
+            <label class="cd-accordion__label cd-accordion__label--icon-folder" for={{ outcome.name }}>
               <a href={{ direct_link | relative_url }}>{{ outcome.label }}</a>
             </label>
+            <ul class="cd-accordion__sub">
+              {% for year in site.data.years %}
+                <li class="cd-accordion__item">
+                  <label class="cd-accordion__label">Year {{ year }}</label>
+                </li>
+              {% endfor %}
+            </ul>
           </li>
         {% endfor %}
       </ul>
