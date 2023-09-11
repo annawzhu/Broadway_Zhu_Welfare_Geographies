@@ -8,7 +8,8 @@ layout: default
     {% capture direct_link %}{{ page.url }}#{{ outcome.name }}{% endcapture %}
     <h2 id={{ outcome.name }}>{{ outcome.label }}<a href={{ direct_link | relative_url }}>#</a></h2>
     {% for year in site.data.years %}
-        <h3>Year {{ year }}</h3>
+        {% capture direct_link %}{{ page.url }}#{{ outcome.name }}-{{ year }}{% endcapture %}
+        <h3 id={{ outcome.name }}-{{ year }}>Year {{ year }}<a href={{ direct_link | relative_url }}>#</a></h3>
         <div>
             {% capture image_file %}/assets/img/{{ outcome.graphs_location }}/g{{ year }}_1.png{% endcapture %}
             <img src={{ image_file | relative_url }}>
