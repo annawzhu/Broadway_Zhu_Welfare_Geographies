@@ -1,0 +1,23 @@
+<li class="cd-accordion__item cd-accordion__item--has-children">
+  <input class="cd-accordion__input" type="checkbox" id={{ include.direct_link }}>
+  <label class="cd-accordion__label cd-accordion__label--icon-folder" for={{ include.direct_link }}>
+    <a href={{ include.direct_link | relative_url }}>{{ include.subheading.label }}</a>
+  </label>
+  <ul class="cd-accordion__sub">
+    {% if include.subheading.subheadings != nil %}
+      {% for subheading in include.subheading.subheadings %}
+        {% capture item_link %}{{ include.direct_link }}-{{ include.subheading.name }}{% endcapture %}
+        {% include accordion_item_for_subheading.html direct_link=item_link subheading=subheading %}
+      {% endfor %}
+    {% endif %}
+    {% for feature in include.subheading.features %}
+      {% capture item_link %}{{ include.direct_link }}-{{ feature }}{% endcapture %}
+      <li class="cd-accordion__item">
+        <label class="cd-accordion__label">
+          <a href={{ item_link | relative_url }}>{{ feature }}</a>
+        </label>
+      </li>
+    {% endfor %}
+  </ul>
+</li>
+
