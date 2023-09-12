@@ -7,21 +7,14 @@ layout: test
 
 <h1>Features</h1>
 {% assign characteristics = site.characteristics | sort: "label" %}
-<ul class="cd-accordion cd-accordion--animated">
+<ul>
   {% for characteristic in characteristics %}
-    <li class="cd-accordion__item cd-accordion__item--has-children">
-      <input class="cd-accordion__input" type="checkbox" id={{ characteristic.label }}>
-      <label class="cd-accordion__label cd-accordion__label--icon-folder" for={{ characteristic.label }}>
-        <a href="{{ characteristic.url | relative_url }}">{{ characteristic.label }}</a>
-      </label>
-      <ul class="cd-accordion__sub">
+    <li class="characteristic-list">
+      <a href="{{ characteristic.url | relative_url }}">{{ characteristic.label }}</a>
+      <ul class="cd-accordion cd-accordion--animated">
         {% for subheading in characteristic.subheadings %}
           {% capture direct_link %}{{ characteristic.url }}#{{ subheading.name }}{% endcapture %}
-          <li class="cd-accordion__item">
-            <label class="cd-accordion__label">
-              <a href={{ direct_link | relative_url }}>{{ subheading.label }}</a>
-            </label>
-          </li>
+          {% include accordion_item_for_subheading.html direct_link=direct_link subheading=subheading %}
         {% endfor %}
       </ul>
     </li>

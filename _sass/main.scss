@@ -155,3 +155,11 @@ ul.cd-accordion__sub {
 .cd-accordion__sub--l3 .cd-accordion__label {
   padding-left: calc(var(--space-md) + var(--space-xxxs) + 48px);
 }
+
+li.characteristic-list {
+  list-style: none;
+}
+
+.characteristic-list > a {
+  font-weight: bold;
+}
