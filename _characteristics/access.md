@@ -17,4 +17,8 @@ subheadings:
       label: Difficulty finding childcare, including outside school hours care
     - name: excess_childcare
       label: Excess childcare places per child (preschool age only)
+    - name: reliability_childcare
+      label: Reliability indicator
+  - name: health_services
+    label: Health services
 ---
