@@ -6,7 +6,7 @@
   <ul class="cd-accordion__sub">
     {% if include.subheading.subheadings != nil %}
       {% for subheading in include.subheading.subheadings %}
-        {% capture item_link %}{{ include.direct_link }}-{{ include.subheading.name }}{% endcapture %}
+        {% capture item_link %}{{ include.direct_link }}-{{ subheading.name }}{% endcapture %}
         {% include accordion_item_for_subheading.html direct_link=item_link subheading=subheading %}
       {% endfor %}
     {% endif %}
