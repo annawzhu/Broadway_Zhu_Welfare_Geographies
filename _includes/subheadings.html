@@ -7,6 +7,7 @@
 {% else %}
     {% assign current_id = "TEST" %}
 {% endif %}
+
 <h{{ include.level }} {% if current_id != nil %}id={{ current_id }}{% endif %}>
     {{ subheading.label }}
     {% if include.level >= 2 %}
@@ -18,7 +19,7 @@
     {% assign sub_level = include.level | plus: 1 %}
     {% include subheadings.html subheadings=subheading.subheadings level=sub_level parent_id=current_id %}
     {% for feature in subheading.features %}
-        {% include feature_image.html feature=feature %}
+        {% include feature_image.html feature=feature parent_id=current_id %}
     {% endfor %}
 
 {% endfor %}
