@@ -23,34 +23,45 @@ layout: test
 
 <h1>SA4s</h1>
 <ul class="cd-accordion cd-accordion--animated">
-  {% for sa4 in site.sa4s %}
+  {% for state in site.data.sa4_states %}
     <li class="cd-accordion__item cd-accordion__item--has-children">
-      <input class="cd-accordion__input" type="checkbox" id={{ sa4.name }}>
-      <label class="cd-accordion__label cd-accordion__label--icon-folder" for={{ sa4.name }}>
-        <a href="{{ sa4.url | relative_url }}">{{ sa4.label }}</a>
+      <input class="cd-accordion__input" type="checkbox" id=sa4statecode{{ state.code }}>
+      <label class="cd-accordion__label cd-accordion__label--icon-folder" for=sa4statecode{{ state.code }}>
+        {{ state.label }}
       </label>
       <ul class="cd-accordion__sub">
-        {% for outcome in site.data.outcomes %}
-          {% capture direct_link %}{{ sa4.url }}#{{ outcome.name }}{% endcapture %}
+        {% assign state_sites = site.sa4s | where: "state_code", state.code %}
+        {% for sa4 in state_sites %}
           <li class="cd-accordion__item cd-accordion__item--has-children">
-            <input class="cd-accordion__input" type="checkbox" id={{ sa4.name }}-{{ outcome.name }}>
-            <label class="cd-accordion__label cd-accordion__label--icon-folder" for={{ sa4.name }}-{{ outcome.name }}>
-              <a href={{ direct_link | relative_url }}>{{ outcome.label }}</a>
+            <input class="cd-accordion__input" type="checkbox" id={{ sa4.name }}>
+            <label class="cd-accordion__label cd-accordion__label--icon-folder" for={{ sa4.name }}>
+              <a href="{{ sa4.url | relative_url }}">{{ sa4.label }}</a>
             </label>
             <ul class="cd-accordion__sub">
-              {% for year in site.data.years %}
-                {% capture direct_link %}{{ sa4.url }}#{{ outcome.name }}-{{ year }}{% endcapture %}
-                <li class="cd-accordion__item">
-                  <label class="cd-accordion__label">
-                    <a href={{ direct_link | relative_url }}>Year {{ year }}</a>
+              {% for outcome in site.data.outcomes %}
+                {% capture direct_link %}{{ sa4.url }}#{{ outcome.name }}{% endcapture %}
+                <li class="cd-accordion__item cd-accordion__item--has-children">
+                  <input class="cd-accordion__input" type="checkbox" id={{ sa4.name }}-{{ outcome.name }}>
+                  <label class="cd-accordion__label cd-accordion__label--icon-folder" for={{ sa4.name }}-{{ outcome.name }}>
+                    <a href={{ direct_link | relative_url }}>{{ outcome.label }}</a>
                   </label>
+                  <ul class="cd-accordion__sub">
+                    {% for year in site.data.years %}
+                      {% capture direct_link %}{{ sa4.url }}#{{ outcome.name }}-{{ year }}{% endcapture %}
+                      <li class="cd-accordion__item">
+                        <label class="cd-accordion__label">
+                          <a href={{ direct_link | relative_url }}>Year {{ year }}</a>
+                        </label>
+                      </li>
+                    {% endfor %}
+                  </ul>
                 </li>
               {% endfor %}
             </ul>
           </li>
         {% endfor %}
+  
       </ul>
     </li>
-
   {% endfor %}
-    </ul>
+</ul>

@@ -1,0 +1,18 @@
+- code: 1
+  label: New South Wales
+- code: 2
+  label: Victoria
+- code: 3
+  label: Queensland
+- code: 4
+  label: South Australia
+- code: 5
+  label: Western Australia
+- code: 6
+  label: Tasmania
+- code: 7
+  label: Northern Territory
+- code: 8
+  label: Australian Capital Territory
+- code: 9
+  label: Other Territories
