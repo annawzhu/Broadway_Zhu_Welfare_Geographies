@@ -33,8 +33,8 @@ layout: test
         {% for outcome in site.data.outcomes %}
           {% capture direct_link %}{{ sa4.url }}#{{ outcome.name }}{% endcapture %}
           <li class="cd-accordion__item cd-accordion__item--has-children">
-            <input class="cd-accordion__input" type="checkbox" id={{ outcome.name }}>
-            <label class="cd-accordion__label cd-accordion__label--icon-folder" for={{ outcome.name }}>
+            <input class="cd-accordion__input" type="checkbox" id={{ sa4.name }}-{{ outcome.name }}>
+            <label class="cd-accordion__label cd-accordion__label--icon-folder" for={{ sa4.name }}-{{ outcome.name }}>
               <a href={{ direct_link | relative_url }}>{{ outcome.label }}</a>
             </label>
             <ul class="cd-accordion__sub">
