@@ -1,20 +1,19 @@
 {% for subheading in include.subheadings %}
 
-{% if include.level == 2 %}
-    {% assign current_id = subheading.name %}
-{% elsif include.level > 2 %}
-    {% capture current_id %}{{ include.parent_id }}-{{ subheading.name }}{% endcapture %}
-{% else %}
-    {% assign current_id = "TEST" %}
-{% endif %}
-
-<h{{ include.level }} {% if current_id != nil %}id={{ current_id }}{% endif %}>
-    {{ subheading.label }}
-    {% if include.level >= 2 %}
-        {% capture direct_link %}{{ page.url }}#{{ current_id }}{% endcapture %}
-        <a href={{ direct_link | relative_url }}>#</a>
+    {% if include.level == 2 %}
+        {% assign current_id = subheading.name %}
+    {% elsif include.level > 2 %}
+        {% capture current_id %}{{ include.parent_id }}-{{ subheading.name }}{% endcapture %}
+    {% else %}
+        {% assign current_id = "TEST" %}
     {% endif %}
-</h{{ include.level }}>
+    <h{{ include.level }} {% if current_id != nil %}id={{ current_id }}{% endif %}>
+        {{ subheading.label }}
+        {% if include.level >= 2 %}
+            {% capture direct_link %}{{ page.url }}#{{ current_id }}{% endcapture %}
+            <a href={{ direct_link | relative_url }}>#</a>
+        {% endif %}
+    </h{{ include.level }}>
 
     {% assign sub_level = include.level | plus: 1 %}
     {% include subheadings.html subheadings=subheading.subheadings level=sub_level parent_id=current_id %}

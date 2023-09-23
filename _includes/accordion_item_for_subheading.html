@@ -11,7 +11,7 @@
       {% endfor %}
     {% endif %}
     {% for feature in include.subheading.features %}
-      {% assign feat = site.data.features | where:"name",include.feature | first %}
+      {% assign feat = site.data.features | where:"name",feature | first %}
       {% capture item_link %}{{ include.direct_link }}-{{ feat.name }}{% endcapture %}
       <li class="cd-accordion__item feature_node">
         <label class="cd-accordion__label">

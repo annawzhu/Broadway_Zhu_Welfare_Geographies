@@ -1,9 +1,9 @@
 <div>
     {% assign feat = site.data.features | where:"name",include.feature | first %}
     {% capture image_file %}/assets/img/combined/resids_{{feat.code}}{{feat.name}}_r.png{% endcapture %}
-    {% capture current_id %}{{ include.parent_id }}-{{ feat.name }}{% endcapture %}
-    {% capture direct_link %}{{ page.url }}#{{ current_id }}{% endcapture %}
-    <div id={{ current_id }}>
+    {% capture feature_image_current_id %}{{ include.parent_id }}-{{ feat.name }}{% endcapture %}
+    {% capture direct_link %}{{ page.url }}#{{ feature_image_current_id }}{% endcapture %}
+    <div id={{ feature_image_current_id }}>
         {{ feat.label }}
         <a href={{ direct_link | relative_url }}>#</a>
         <img src={{ image_file | relative_url }}>
