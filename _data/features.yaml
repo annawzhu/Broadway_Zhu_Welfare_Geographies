@@ -7,3 +7,168 @@
 - name: shareWorkHome
   code: a03
   label: Share of population who is working at home, out of all working and method stated, 2006, in SA4
+- name: sharePriv
+  code: a04
+  label: Share of population who is using private transport (plus bike or walking), out of all working and method stated, 2006, in SA4
+- name: totei_sa4
+  code: a05
+  label: Number of post-secondary accredited education institutions (without universities)
+- name: plcexs
+  code: a06 
+  label: Excess childcare places per child (preschool age only)
+- name: plcexsrelhgh
+  code: a07
+  label: Excess childcare places per child (preschool age only), if highly reliable
+- name: DifACmb05
+  code: a08
+  label: Difficulty finding childcare, including outside school hours care (combined measure)
+- name: gppop
+  code: a09
+  label: Number of GPs working in SA3, per 100,000
+- name: sharemptnr
+  code: a11
+  label: "Potential partners: Population share who is male, has no university degree, is not legally/de facto married"
+- name: compptnr
+  code: a12
+  label: "Potential competition: Population share who is female, has no university degree not legally/de facto married over potential partners"
+- name: shareEM
+  code: a13
+  label: Share of male population who is employed
+- name: shareUEM
+  code: a14
+  label: Share of male population who is unemployed
+- name: shareNLFM
+  code: a15 
+  label: Share of male population who is not in the labour force
+- name: shareFTF
+  code: a16 
+  label: Share of female population who is full-time employed
+- name: sharePTF
+  code: a17 
+  label: Share of female population who is part-time employed
+- name: shareUEF
+  code: a18
+  label: Share of female population who is unemployed
+- name: shareNLFF
+  code: a19
+  label: Share of female population who is not in the labour force
+- name: shareY12
+  code: a20
+  label: Share of population who finished Year 12
+- name: sharePsq
+  code: a21 
+  label: Share of population with a post-secondary qualification
+- name: sharelwskll 
+  code: a24 
+  label: Share of population with a low-skilled occupation
+- name: sharemdskll 
+  code: a23 
+  label: Share of population with a medium-skilled occupation
+- name: sharehghskll 
+  code: a22
+  label: Share of population with a high-skilled occupation
+- name: shareGov
+  code: a25
+  label: Share of employed population who stated to work for Cmwlth or state govt, 2006, SA4
+- name: shareLGA
+  code: a26
+  label: Share of employed population who stated to work for local govt, 2006, SA4
+- name: sharePrivS
+  code: a27
+  label: Share of employed population who stated to work for private sector, 2006, SA4
+- name: shareRent 
+  code: a28
+  label: Share of population who rents (SA4)
+- name: rentavg 
+  code: a29
+  label: Average weekly rent
+- name: rentrelavg 
+  code: a30
+  label: Average weekly rent, relative to average local income
+- name: rentrelp25 
+  code: a31
+  label: Average weekly rent, relative to 25th percentile of local income
+- name: rentrelp50 
+  code: a32 
+  label: Average weekly rent, relative to 50th percentile of local income
+- name: hiedavg 
+  code: a33
+  label: Average equivalised household income
+- name: pov25 
+  code: a34
+  label: Share of households with equivalised income below Australia-wide 25th percentile
+- name: pov50 
+  code: a35 
+  label: Share of households with equivalised income below Australia-wide 50th percentile
+- name: cloan
+  code: a36
+  label: Share of population with consumption loan, SA4, 2006
+- name: psa4ispop 
+  code: a37
+  label: Population share who received any income support for at least one day in last year
+- name: psa4ubpop 
+  code: a38
+  label: Population share who received unemployment benefits for at least one day in last year
+- name: psa4ishalf 
+  code: a39
+  label: Population share who received any income support for at least six months in last year
+- name: psa4ubhalf 
+  code: a40
+  label: Population share who received unemployment benefits for at least six months in last year
+- name: psa4isfull 
+  code: a41
+  label: Population share who received any income support for all of last year
+- name: psa4ubfull 
+  code: a42
+  label: Population share who received unemployment benefits for all of last year
+- name: valsucc
+  code: a44
+  label: "Average agreement [1-7]: Many working mothers seem to care more about being successful at work than meeting the needs of their children"
+- name: valwork
+  code: a45
+  label: Average agreement [1-7] Mothers who don't really need the money shouldn't work
+- name: valcare
+  code: a46
+  label: Average agreement [1-7] As long as the care is good, it is fine for children under 3 years of age to be placed in childcare all day for 5 days a week [reversed]
+- name: DivLEng
+  code: a47
+  label: Population share who speak mainly English at home
+- name: DivLM
+  code: a48
+  label: "For two random residents with other language mainly spoken at home: probability that language is the same"
+- name: DivCAus
+  code: a49
+  label: Population share who was born in Australia
+- name: DivCM
+  code: a50
+  label: "For two random residents with country of birth other than Australia: probability that country of birth is the same"
+- name: DivAAus
+  code: a51
+  label: Population share wirh Australian ancestry
+- name: DivAM
+  code: a52
+  label: "For two random residents with ancestry other than Australian: probability that ancestry is the same"
+- name: sharevol
+  code: a53
+  label: Population share who did unpaid voluntary work in the last twelve months
+- name: satneigh
+  code: a53
+  label: Reported satisfaction [0,10] with the neighbourhood in which you live 
+- name: satloccom
+  code: a54
+  label: Reported satisfaction [0,10] with feeling part of your local community
+- name: satsafe
+  code: a55
+  label: Reported satisfaction [0,10] with how safe you feel
+- name: meanirsadscore 
+  code: a67 
+  label: Index of Socio-Economic Advantage and Disadvantage (IRSAD)
+- name: meanieoscore 
+  code: a68
+  label: Index of Education and Occupation (IEO)
+- name: meanierscore
+  code: a69
+  label: Index of Economic Resources (IER)
+- name: meanirsedscore 
+  code: a70
+  label: Index of Relative Socio-Economic Disadvantage (IRSD)
