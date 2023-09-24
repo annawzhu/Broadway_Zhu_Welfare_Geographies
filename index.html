@@ -30,7 +30,7 @@ layout: test
         {{ state.label }}
       </label>
       <ul class="cd-accordion__sub">
-        {% assign state_sites = site.sa4s | where: "state_code", state.code %}
+        {% assign state_sites = site.sa4s | where: "state_code", state.code | sort: "name" %}
         {% for sa4 in state_sites %}
           <li class="cd-accordion__item cd-accordion__item--has-children">
             <input class="cd-accordion__input" type="checkbox" id={{ sa4.name }}>
