@@ -4,6 +4,8 @@
   graphs_subname: ''
 - name: income
   label: Income (annual AUD)
+  graphs_location: rd_plots_income
+  graphs_subname: _inc
 - name: employment
   label: Employment (%)
   graphs_location: rd_plots_emp
