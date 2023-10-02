@@ -10,7 +10,3 @@
   label: Employment (%)
   graphs_location: rd_plots_emp
   graphs_subname: _emp
-- name: repartnering
-  label: Re-partnering (%)
-- name: location
-  label: Moving location (%)
