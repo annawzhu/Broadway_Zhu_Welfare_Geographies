@@ -55,8 +55,8 @@ collections:
   sa4s:
     output: true
     permalink: /:collection/:slug:output_ext
-  characteristics:
-    output: true
+  # characteristics:
+  #   output: true
 
 defaults:
   - scope:
@@ -64,11 +64,11 @@ defaults:
       type: sa4s
     values:
       layout: sa4s
-  - scope:
-      path: ""
-      type: characteristics
-    values:
-      layout: characteristics
+  # - scope:
+  #     path: ""
+  #     type: characteristics
+  #   values:
+  #     layout: characteristics
 
 github: 
   is_project_page: False

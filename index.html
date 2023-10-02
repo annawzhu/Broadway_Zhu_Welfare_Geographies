@@ -5,6 +5,7 @@
 layout: index_layout
 ---
 
+{% comment %}
 <h1>Features</h1>
 {% assign characteristics = site.characteristics | sort: "label" %}
 <ul>
@@ -20,6 +21,7 @@ layout: index_layout
     </li>
   {% endfor %}
 </ul>
+{% endcomment %}
 
 <h1>SA4s</h1>
 <ul class="cd-accordion cd-accordion--animated">
