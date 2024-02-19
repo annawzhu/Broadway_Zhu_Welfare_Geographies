@@ -11,7 +11,7 @@ layout: default
         {% capture direct_link %}{{ page.url }}#{{ outcome.name }}-{{ year }}{% endcapture %}
         <h3 id={{ outcome.name }}-{{ year }}>Year {{ year }}<a href={{ direct_link | relative_url }}>#</a></h3>
         <div>
-            {% capture image_file %}/assets/img/{{ outcome.graphs_location }}/g{{ outcome.graphs_subname }}{{ year }}_1.png{% endcapture %}
+            {% capture image_file %}/assets/img/{{ outcome.graphs_location }}/g{{ outcome.graphs_subname }}{{ year }}_{{ page.name }}.png{% endcapture %}
             <img src={{ image_file | relative_url }}>
         </div>
     {% endfor %}
